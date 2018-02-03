@@ -80,6 +80,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var cardHolder4: UIImageView!
     @IBOutlet weak var cardHolder5: UIImageView!
     @IBOutlet weak var newGameButton: UIButton!
+    @IBOutlet weak var backGroundImageMain: UIImageView!
     
     
     override func viewDidLoad() {
@@ -123,6 +124,8 @@ class ViewController: UIViewController {
             counter += 1
             if cardCount > 21 {
                 lostGame()
+            }else if cardCount == 21 {
+                winGame()
             }
         }
 
@@ -138,11 +141,17 @@ class ViewController: UIViewController {
         cardValueCount.text = "Value"
         counter = 0
     }
-    
+    func winGame(){
+        cardValueCount.text = "You won!!"
+        initCardArray()
+        newGameButton.isHidden  = false
+        backGroundImageMain.image = UIImage(named: "strip_b86ddbea-3add-4995-b449-ac85d700b027")
+    }
     func lostGame(){
         cardValueCount.text = "You lost"
         initCardArray()
         newGameButton.isHidden  = false
+        backGroundImageMain.image = UIImage(named: "strip_b86ddbea-3add-4995-b449-ac85d700b027")
     }
     
     
