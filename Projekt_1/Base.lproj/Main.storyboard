@@ -10,9 +10,6 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <customFonts key="customFonts">
-        <array key="HelveticaNeue.ttc">
-            <string>HelveticaNeue</string>
-        </array>
         <array key="HelveticaNeueLights.ttc">
             <string>HelveticaNeue-Light</string>
         </array>
@@ -26,7 +23,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" alpha="0.40000000000000002" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="LV_1" translatesAutoresizingMaskIntoConstraints="NO" id="mpS-vb-vn6">
+                            <imageView userInteractionEnabled="NO" alpha="0.5" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="LV_1" translatesAutoresizingMaskIntoConstraints="NO" id="mpS-vb-vn6">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                             </imageView>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFit" text="The only difference between a winner and a loser is character.  - Nick the Greek" translatesAutoresizingMaskIntoConstraints="NO" id="ZNF-Mi-vzl">
@@ -36,7 +33,7 @@
                                     <constraint firstAttribute="width" constant="374" id="6gJ-02-7e9"/>
                                 </constraints>
                                 <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="36"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="30"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                             <button opaque="NO" alpha="0.5" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="28Y-jZ-5jQ">
@@ -50,7 +47,7 @@
                                 </connections>
                             </button>
                         </subviews>
-                        <color key="backgroundColor" red="0.052821151912212372" green="0.36044147610664368" blue="0.068120084702968597" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" red="0.052821151910000003" green="0.36044147609999999" blue="0.0681200847" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="ZNF-Mi-vzl" firstAttribute="top" secondItem="jKZ-eS-IxV" secondAttribute="top" constant="297" id="4Gp-Ra-Y85"/>
                             <constraint firstItem="jKZ-eS-IxV" firstAttribute="bottom" secondItem="ZNF-Mi-vzl" secondAttribute="bottom" constant="157" id="7K2-Rv-E3I"/>
@@ -81,14 +78,14 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="cardBack_red1" translatesAutoresizingMaskIntoConstraints="NO" id="0l4-6S-cBs">
-                                <rect key="frame" x="20" y="401" width="56" height="98"/>
+                                <rect key="frame" x="37" y="423" width="60" height="100"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="h7e-B9-eo4">
-                                <rect key="frame" x="76" y="527" width="222" height="64"/>
+                                <rect key="frame" x="20" y="563" width="91" height="62"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="0.053963740406041807" green="0.36264177598172609" blue="0.068239468429664996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="44"/>
+                                <color key="backgroundColor" red="0.052821151910000003" green="0.36044147609999999" blue="0.0681200847" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="30"/>
                                 <state key="normal" title="Hit">
                                     <color key="titleColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
@@ -97,30 +94,58 @@
                                 </connections>
                             </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="cardBack_red1" translatesAutoresizingMaskIntoConstraints="NO" id="5co-wN-cXF">
-                                <rect key="frame" x="99" y="401" width="56" height="98"/>
+                                <rect key="frame" x="107" y="423" width="60" height="100"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="cardBack_red1" translatesAutoresizingMaskIntoConstraints="NO" id="dOI-yw-exA">
-                                <rect key="frame" x="257" y="401" width="56" height="98"/>
+                                <rect key="frame" x="247" y="423" width="60" height="100"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="cardBack_red1" translatesAutoresizingMaskIntoConstraints="NO" id="CE9-4Y-MKa">
-                                <rect key="frame" x="338" y="401" width="56" height="98"/>
+                                <rect key="frame" x="317" y="423" width="60" height="100"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Value" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Y5O-AC-RdP">
-                                <rect key="frame" x="112" y="259" width="191" height="101"/>
+                                <rect key="frame" x="66" y="259" width="282" height="101"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="0.053963740410000002" green="0.36264177600000003" blue="0.068239468430000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <color key="backgroundColor" red="0.052821151910000003" green="0.36044147609999999" blue="0.0681200847" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="30"/>
                                 <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Wt8-35-idH">
-                                <rect key="frame" x="70" y="507" width="274" height="118"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Dealers score" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="B8w-aP-4tP">
+                                <rect key="frame" x="66" y="152" width="282" height="80"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.052821151910000003" green="0.36044147609999999" blue="0.0681200847" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="50"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="30"/>
+                                <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="cardBack_red1" translatesAutoresizingMaskIntoConstraints="NO" id="oMr-Oc-Vky">
+                                <rect key="frame" x="177" y="423" width="60" height="100"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="cardBack_red1" translatesAutoresizingMaskIntoConstraints="NO" id="joe-ei-YVV">
+                                <rect key="frame" x="37" y="20" width="60" height="100"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="cardBack_red1" translatesAutoresizingMaskIntoConstraints="NO" id="32V-q7-jep">
+                                <rect key="frame" x="107" y="20" width="60" height="100"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="cardBack_red1" translatesAutoresizingMaskIntoConstraints="NO" id="CEq-mF-aL1">
+                                <rect key="frame" x="177" y="20" width="60" height="100"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="cardBack_red1" translatesAutoresizingMaskIntoConstraints="NO" id="LhQ-hL-Q2i">
+                                <rect key="frame" x="247" y="20" width="60" height="100"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Wt8-35-idH">
+                                <rect key="frame" x="133" y="563" width="147" height="62"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.052821151910000003" green="0.36044147609999999" blue="0.0681200847" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="30"/>
                                 <state key="normal" title="New game">
                                     <color key="titleColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
@@ -128,16 +153,20 @@
                                     <action selector="newGameButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="iEm-jT-nZ0"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Dealers score" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="B8w-aP-4tP">
-                                <rect key="frame" x="112" y="146" width="191" height="79"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9z1-7Z-cdh">
+                                <rect key="frame" x="301" y="563" width="93" height="62"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="0.053963740410000002" green="0.36264177600000003" blue="0.068239468430000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="28"/>
-                                <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="cardBack_red1" translatesAutoresizingMaskIntoConstraints="NO" id="oMr-Oc-Vky">
-                                <rect key="frame" x="179" y="401" width="56" height="98"/>
+                                <color key="backgroundColor" red="0.052821151910000003" green="0.36044147609999999" blue="0.0681200847" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="30"/>
+                                <state key="normal" title="Stand">
+                                    <color key="titleColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="standButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ReP-sM-Csi"/>
+                                </connections>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="cardBack_red1" translatesAutoresizingMaskIntoConstraints="NO" id="EzW-H9-MYG">
+                                <rect key="frame" x="317" y="20" width="60" height="100"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                         </subviews>
@@ -152,6 +181,13 @@
                         <outlet property="cardHolder4" destination="dOI-yw-exA" id="PcL-fc-dih"/>
                         <outlet property="cardHolder5" destination="CE9-4Y-MKa" id="xPn-xg-a7l"/>
                         <outlet property="cardValueCount" destination="Y5O-AC-RdP" id="0fH-SR-kpu"/>
+                        <outlet property="dealerCardHolder1" destination="joe-ei-YVV" id="Om6-Ws-E9Y"/>
+                        <outlet property="dealerCardHolder2" destination="32V-q7-jep" id="LeW-tt-iXQ"/>
+                        <outlet property="dealerCardHolder3" destination="CEq-mF-aL1" id="PjP-5w-AJM"/>
+                        <outlet property="dealerCardHolder4" destination="LhQ-hL-Q2i" id="w9o-Kb-wkw"/>
+                        <outlet property="dealerCardHolder5" destination="EzW-H9-MYG" id="tEu-6h-2jY"/>
+                        <outlet property="dealerValueCount" destination="B8w-aP-4tP" id="fsF-sO-1SL"/>
+                        <outlet property="hitButton" destination="h7e-B9-eo4" id="rXd-DG-cd7"/>
                         <outlet property="newGameButton" destination="Wt8-35-idH" id="HHP-xe-PdQ"/>
                     </connections>
                 </viewController>

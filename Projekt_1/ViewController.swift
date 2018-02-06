@@ -69,10 +69,13 @@ class ViewController: UIViewController {
     
     var cardArray = [Card]()
     var cardImageArray = [UIImageView]()
-    
+    var dealerImageArray = [UIImageView]()
     var randomCardIndex: Int = 0
     var cardCount : Int = 0
+    var cardDealerCount = 0
+    var dealerCounter : Int = 0
     var counter: Int = 0
+    
     @IBOutlet weak var cardValueCount: UILabel!
     @IBOutlet weak var cardHolder: UIImageView!
     @IBOutlet weak var cardHolder2: UIImageView!
@@ -81,80 +84,176 @@ class ViewController: UIViewController {
     @IBOutlet weak var cardHolder5: UIImageView!
     @IBOutlet weak var newGameButton: UIButton!
     @IBOutlet weak var backGroundImageMain: UIImageView!
+    @IBOutlet weak var dealerValueCount: UILabel!
+    @IBOutlet weak var dealerCardHolder1: UIImageView!
+    @IBOutlet weak var dealerCardHolder2: UIImageView!
+    @IBOutlet weak var dealerCardHolder3: UIImageView!
+    @IBOutlet weak var dealerCardHolder4: UIImageView!
+    @IBOutlet weak var dealerCardHolder5: UIImageView!
+    @IBOutlet weak var hitButton: UIButton!
+    
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
         initCardArray()
         cardImageArray = [cardHolder, cardHolder2, cardHolder3, cardHolder4, cardHolder5]
+        dealerImageArray = [dealerCardHolder1, dealerCardHolder2, dealerCardHolder3, dealerCardHolder4, dealerCardHolder5]
     }
+    
    
     func initCardArray()
     {
         cardArray = [card1, card2, card3, card4, card5, card6, card7, card8, card9, card11, card12, card13, card14, card15, card16, card17, card18, card19, card20,card21, card22, card23, card25, card26, card27, card28, card29, card30, card31, card32, card33, card34, card35, card36, card37, card39, card40, card41, card42, card43, card44, card45, card46, card47, card48, card49, card50, card51, card53, card54, card55, card56]
-    
-        
-        
-       // cardArray = [card25,card39,card53]
     }
     
     
     @IBAction func randomButton(_ sender: UIButton) {
-        randomCardIndex = Int(arc4random_uniform(UInt32(cardArray.count)))
-        let randomCard = cardArray[randomCardIndex]
-        cardArray.remove(at: randomCardIndex)
-        if cardArray.count < 1{
-            initCardArray()
-        }
-
-        if randomCard.cardValue == 11{
-            // 11, vid Ess
-            if cardCount >= 11{
-                    cardCount += 1
-            } else{
-                cardCount += 11
-            }
-        } else {
-            cardCount += randomCard.cardValue
-        }
-        
-        if cardCount < 31  {
-            cardImageArray[counter].image = UIImage(named: randomCard.cardName)
-            cardValueCount.text = "\(cardCount)"
-            counter += 1
-            if cardCount > 21 {
-                lostGame()
-            }else if cardCount == 21 {
-                winGame()
-            }
-        }
-
+        playGame()
+        checkWin()
     }
     
     @IBAction func newGameButton(_ sender: UIButton) {
         sender.isHidden = true
-        
         for index in  0...4{
             cardImageArray[index].image = UIImage(named: "cardBack_blue1")
+            dealerImageArray[index].image = UIImage(named: "cardBack_blue1")
         }
         cardCount = 0
         cardValueCount.text = "Value"
         counter = 0
-    }
-    func winGame(){
-        cardValueCount.text = "You won!!"
-        initCardArray()
-        newGameButton.isHidden  = false
-        backGroundImageMain.image = UIImage(named: "strip_b86ddbea-3add-4995-b449-ac85d700b027")
-    }
-    func lostGame(){
-        cardValueCount.text = "You lost"
-        initCardArray()
-        newGameButton.isHidden  = false
-        backGroundImageMain.image = UIImage(named: "strip_b86ddbea-3add-4995-b449-ac85d700b027")
+        dealerCounter = 0
+        cardDealerCount = 0
+        dealerValueCount.text = "Try me"
+        for index in 1...2{
+        playGame()
+        print(index)
+        }
+        dealerGame()
     }
     
+    func playGame(){
+        randomCardIndex = Int(arc4random_uniform(UInt32(cardArray.count))) //slumpar fram tal
+        let randomCard = cardArray[randomCardIndex] // tilldelar slumptal till kort
+        cardArray.remove(at: randomCardIndex) //tar bort det valda kortet från leken
+        if cardArray.count < 10{ // blanda om leken vid för få kort
+            initCardArray()
+        }
+        
+        if randomCard.cardValue == 11{
+            // 11, vid Ess
+            if cardCount >= 11{
+                cardCount += 1
+            } else{
+                cardCount += 11
+            }
+        } else {                            //räkna upp poängen
+            cardCount += randomCard.cardValue
+        }
+       checkWin()
+        if cardCount < 31  {    //fortsätt tills spelaren blir tjock
+            cardImageArray[counter].image = UIImage(named: randomCard.cardName)//byt bild
+            cardValueCount.text = "\(cardCount)" // sätt poängen i labeln
+            counter += 1                        //räkna upp bildplatsen
+            checkWin()
+//            if cardCount > 21 {
+//                cardValueCount.text = "You lost"
+//                dealerValueCount.text = "Computer won"
+//                newGame()
+//            }else if cardCount == 21 {
+//                cardValueCount.text = "Player won!!"
+//                dealerValueCount.text = "Computer lost"
+//                newGame()
+//                }
+            }
+        print(counter, cardCount)
+        }
     
+    
+    
+    func newGame(){
+        initCardArray()
+        newGameButton.isHidden  = false
+        backGroundImageMain.image = UIImage(named: "LV_2")
+    }
+    
+    @IBAction func standButton(_ sender: Any) {
+        while cardDealerCount < 17{
+        dealerGame()
+        }
+    }
+    
+    func dealerGame(){
+        
+        randomCardIndex = Int(arc4random_uniform(UInt32(cardArray.count))) //slumpar fram tal
+        let randomCard = cardArray[randomCardIndex] // tilldelar slumptal till kort
+        cardArray.remove(at: randomCardIndex) //tar bort det valda kortet från leken
+        if cardArray.count < 10{ // blanda om leken vid för få kort
+            initCardArray()
+        }
+        
+        if randomCard.cardValue == 11{
+            // 11, vid Ess
+            if cardDealerCount >= 11{
+                cardDealerCount += 1
+            } else{
+                cardDealerCount += 11
+            }
+        } else {                            //räkna upp poängen
+            cardDealerCount += randomCard.cardValue
+        }
+        checkWin()
+        if cardDealerCount < 31  {    //fortsätt tills spelaren blir tjock
+            dealerImageArray[dealerCounter].image = UIImage(named: randomCard.cardName)//byt bild
+            dealerValueCount.text = "\(cardDealerCount)" // sätt poängen i labeln
+            dealerCounter += 1                        //räkna upp bildplatsen
+            checkWin()
+//            if cardDealerCount > 21 {
+//                dealerValueCount.text = "Computer lost"
+//                cardValueCount.text = "Player won"
+//                newGame()
+//            }else if cardDealerCount == 21 {
+//                dealerValueCount.text = "Computer won!!"
+//                cardValueCount.text = "Player lost"
+//                newGame()
+//            }
+        print(dealerCounter, cardDealerCount)
+        }
+    }
+    func checkWin(){
+        if cardCount > 21{
+            dealerValueCount.text = "\(cardDealerCount) Computer won!!"
+            cardValueCount.text = "\(cardCount) Player lost"
+            newGame()
+        }else if cardDealerCount > 21{
+            dealerValueCount.text = "\(cardDealerCount) Computer lost"
+            cardValueCount.text = "\(cardCount) Player won"
+            newGame()
+        }
+        if cardCount == 21 && counter == 2{
+            cardValueCount.text = "\(cardCount) Blackjack!"
+            newGame()
+        }else if cardDealerCount == 21 && dealerCounter == 2{
+            dealerValueCount.text = "\(cardDealerCount) Blackjack!"
+            newGame()
+        }
+        if counter >= 2 && dealerCounter >= 2{
+            if cardDealerCount > cardCount && cardDealerCount <= 21{
+                dealerValueCount.text = "\(cardDealerCount) Computer won!!"
+                cardValueCount.text = "\(cardCount) Player lost"
+                newGame()
+            }else if cardDealerCount < cardCount && cardCount <= 21{
+                dealerValueCount.text = "\(cardDealerCount) Computer lost"
+                cardValueCount.text = "\(cardCount) Player won"
+                newGame()
+            }
+        }
+        if cardCount == cardDealerCount{
+            dealerValueCount.text = "\(cardDealerCount) Stalemate"
+            cardValueCount.text = "\(cardCount) Stalemate"
+            newGame()
+        }
+    }
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
