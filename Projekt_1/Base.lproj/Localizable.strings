@@ -9,4 +9,10 @@
 
 "dealer_score" = "Dealers score: %d";
 "player_score" = "Players score: %d";
-"dealer_win" = "Dealers Win: %d";
+"dealer_win" = "Dealer Wins: %d";
+"player_win" = "Player Wins: %d";
+"dealer_lost" = "%d, Dealer lost";
+"player_lost" = "%d, Player lost";
+"stalemate_dealer" = "Stalemate: %d";
+"stalemate_player" = "Stalemate: %d";
+

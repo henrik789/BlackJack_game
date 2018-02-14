@@ -9,7 +9,9 @@
 
 "dealer_score" = "Given poäng: %d";
 "player_score" = "Spelare poäng: %d";
-"dealer_win" = "%d, Given vann";
-"player_win" = "%d, Spelare vann";
-"dealer_lost" = "%d, Given förlorade";
-"player_lost" = "%d, Spelare förlorade";
+"dealer_win" = "Given vann: %d";
+"player_win" = "Spelare vann: %d";
+"dealer_lost" = "Given förlorade: %d";
+"player_lost" = "Spelare förlorade: %d";
+"stalemate_dealer" = "Oavgjort: %d";
+"stalemate_player" = "Oavgjort: %d";

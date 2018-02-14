@@ -278,6 +278,16 @@ class ViewController: UIViewController {
         losePlayerText = String(format: losePlayerText, cardCount)
         cardValueCount.text = losePlayerText
     }
+    func setStalematePlayer(){
+        var stalematePlayerText = NSLocalizedString("stalemate_player", comment: "")
+        stalematePlayerText = String(format: stalematePlayerText, cardCount)
+        cardValueCount.text = stalematePlayerText
+    }
+    func setStalemateDealer(){
+        var stalemateDealerText = NSLocalizedString("stalemate_dealer", comment: "")
+        stalemateDealerText = String(format: stalemateDealerText, cardDealerCount)
+        dealerValueCount.text = stalemateDealerText
+    }
     func tooManyPoints(){
     if cardCount > 21{
 //    dealerValueCount.text = "\(cardDealerCount) Computer won!!"
@@ -327,8 +337,10 @@ class ViewController: UIViewController {
         }
         if cardCount >= 17 && cardCount == cardDealerCount{
             blackJackCheck()
-            dealerValueCount.text = "\(cardDealerCount) Stalemate"
-            cardValueCount.text = "\(cardCount) Stalemate"
+//            dealerValueCount.text = "\(cardDealerCount) Stalemate"
+//            cardValueCount.text = "\(cardCount) Stalemate"
+            setStalemateDealer()
+            setStalematePlayer()
             newGame()
         } else if counter == 5 || dealerCounter == 5{
             newGame()
