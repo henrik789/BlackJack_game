@@ -1,0 +1,24 @@
+
+/* Class = "UIButton"; normalTitle = "Stand"; ObjectID = "9z1-7Z-cdh"; */
+"9z1-7Z-cdh.normalTitle" = "Håll";
+
+/* Class = "UILabel"; text = "Dealers card"; ObjectID = "B8w-aP-4tP"; */
+"B8w-aP-4tP.text" = "Givens kort";
+
+/* Class = "UIButton"; normalTitle = "New game"; ObjectID = "Wt8-35-idH"; */
+"Wt8-35-idH.normalTitle" = "Nytt spel";
+
+/* Class = "UILabel"; text = "Players card"; ObjectID = "Y5O-AC-RdP"; */
+"Y5O-AC-RdP.text" = "Spelares kort";
+
+/* Class = "UITextView"; text = "The only difference between a winner and a loser is character.  - Nick the Greek"; ObjectID = "aIk-Da-UcX"; */
+"aIk-Da-UcX.text" = "The only difference between a winner and a loser is character.  - Nick the Greek";
+
+/* Class = "UIButton"; normalTitle = "Hit"; ObjectID = "h7e-B9-eo4"; */
+"h7e-B9-eo4.normalTitle" = "Kort";
+
+/* Class = "UILabel"; text = "Dealer Score:"; ObjectID = "ww9-R5-EHK"; */
+"ww9-R5-EHK.text" = "Givens poäng:";
+
+/* Class = "UILabel"; text = "Player Score:"; ObjectID = "ym8-KN-Bpd"; */
+"ym8-KN-Bpd.text" = "Spelares poäng:";

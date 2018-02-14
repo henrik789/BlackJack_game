@@ -1,0 +1,15 @@
+/* 
+  Localizable.strings
+  Projekt_1-2
+
+  Created by Henrik on 2018-02-13.
+  Copyright © 2018 Henrik. All rights reserved.
+*/
+
+
+"dealer_score" = "Given poäng: %d";
+"player_score" = "Spelare poäng: %d";
+"dealer_win" = "%d, Given vann";
+"player_win" = "%d, Spelare vann";
+"dealer_lost" = "%d, Given förlorade";
+"player_lost" = "%d, Spelare förlorade";

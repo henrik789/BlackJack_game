@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		AF3D910020330463007AC81D /* GamePlay.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF3D90FF20330463007AC81D /* GamePlay.swift */; };
+		AF3D910520330719007AC81D /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = AF3D910720330719007AC81D /* Localizable.strings */; };
 		AF914BE720173B4B0074BA24 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF914BE620173B4B0074BA24 /* AppDelegate.swift */; };
 		AF914BE920173B4C0074BA24 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF914BE820173B4C0074BA24 /* ViewController.swift */; };
 		AF914BEC20173B4C0074BA24 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AF914BEA20173B4C0074BA24 /* Main.storyboard */; };
@@ -17,6 +19,11 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		AF3D90FF20330463007AC81D /* GamePlay.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GamePlay.swift; sourceTree = "<group>"; };
+		AF3D91012033061F007AC81D /* sv */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = sv; path = sv.lproj/Main.strings; sourceTree = "<group>"; };
+		AF3D91022033061F007AC81D /* sv */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = sv; path = sv.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
+		AF3D910620330719007AC81D /* sv */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = sv; path = sv.lproj/Localizable.strings; sourceTree = "<group>"; };
+		AF3D910820330725007AC81D /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Base; path = Base.lproj/Localizable.strings; sourceTree = "<group>"; };
 		AF914BE320173B4B0074BA24 /* Projekt_1.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Projekt_1.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AF914BE620173B4B0074BA24 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AF914BE820173B4C0074BA24 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -66,6 +73,8 @@
 				AF914BEF20173B4C0074BA24 /* LaunchScreen.storyboard */,
 				AF914BF220173B4C0074BA24 /* Info.plist */,
 				AF98DBEF2021C2E2007A20CA /* Notes.rtf */,
+				AF3D90FF20330463007AC81D /* GamePlay.swift */,
+				AF3D910720330719007AC81D /* Localizable.strings */,
 			);
 			path = Projekt_1;
 			sourceTree = "<group>";
@@ -129,6 +138,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AF3D910520330719007AC81D /* Localizable.strings in Resources */,
 				AF98DBF02021C2E2007A20CA /* Notes.rtf in Resources */,
 				AF914BF120173B4C0074BA24 /* LaunchScreen.storyboard in Resources */,
 				AF914BEE20173B4C0074BA24 /* Assets.xcassets in Resources */,
@@ -144,6 +154,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				AF99D390201A60D2002D14B2 /* Cards.swift in Sources */,
+				AF3D910020330463007AC81D /* GamePlay.swift in Sources */,
 				AF914BE920173B4C0074BA24 /* ViewController.swift in Sources */,
 				AF914BE720173B4B0074BA24 /* AppDelegate.swift in Sources */,
 			);
@@ -152,10 +163,20 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
+		AF3D910720330719007AC81D /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				AF3D910620330719007AC81D /* sv */,
+				AF3D910820330725007AC81D /* Base */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
 		AF914BEA20173B4C0074BA24 /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
 				AF914BEB20173B4C0074BA24 /* Base */,
+				AF3D91012033061F007AC81D /* sv */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
@@ -164,6 +185,7 @@
 			isa = PBXVariantGroup;
 			children = (
 				AF914BF020173B4C0074BA24 /* Base */,
+				AF3D91022033061F007AC81D /* sv */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
@@ -175,6 +197,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
@@ -232,6 +255,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
