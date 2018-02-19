@@ -16,6 +16,8 @@
 		AF914BF120173B4C0074BA24 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AF914BEF20173B4C0074BA24 /* LaunchScreen.storyboard */; };
 		AF98DBF02021C2E2007A20CA /* Notes.rtf in Resources */ = {isa = PBXBuildFile; fileRef = AF98DBEF2021C2E2007A20CA /* Notes.rtf */; };
 		AF99D390201A60D2002D14B2 /* Cards.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF99D38F201A60D2002D14B2 /* Cards.swift */; };
+		AFA1905F20370D9300288FA4 /* Designable.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFA1905E20370D9300288FA4 /* Designable.swift */; };
+		AFFA3F1E20381B1E00270DFC /* Animate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFFA3F1D20381B1E00270DFC /* Animate.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -33,6 +35,8 @@
 		AF914BF220173B4C0074BA24 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AF98DBEF2021C2E2007A20CA /* Notes.rtf */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; path = Notes.rtf; sourceTree = "<group>"; };
 		AF99D38F201A60D2002D14B2 /* Cards.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cards.swift; sourceTree = "<group>"; };
+		AFA1905E20370D9300288FA4 /* Designable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Designable.swift; sourceTree = "<group>"; };
+		AFFA3F1D20381B1E00270DFC /* Animate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Animate.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -75,6 +79,8 @@
 				AF98DBEF2021C2E2007A20CA /* Notes.rtf */,
 				AF3D90FF20330463007AC81D /* GamePlay.swift */,
 				AF3D910720330719007AC81D /* Localizable.strings */,
+				AFA1905E20370D9300288FA4 /* Designable.swift */,
+				AFFA3F1D20381B1E00270DFC /* Animate.swift */,
 			);
 			path = Projekt_1;
 			sourceTree = "<group>";
@@ -154,9 +160,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				AF99D390201A60D2002D14B2 /* Cards.swift in Sources */,
+				AFA1905F20370D9300288FA4 /* Designable.swift in Sources */,
 				AF3D910020330463007AC81D /* GamePlay.swift in Sources */,
 				AF914BE920173B4C0074BA24 /* ViewController.swift in Sources */,
 				AF914BE720173B4B0074BA24 /* AppDelegate.swift in Sources */,
+				AFFA3F1E20381B1E00270DFC /* Animate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

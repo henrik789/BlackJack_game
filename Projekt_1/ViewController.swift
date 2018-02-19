@@ -79,6 +79,7 @@ class ViewController: UIViewController {
     var counter: Int = 0
     var playersScore: Int = 0
     var dealersScore: Int = 0
+    var effectBlur: UIVisualEffect!
     
     @IBOutlet weak var cardValueCount: UILabel!
     @IBOutlet weak var cardHolder: UIImageView!
@@ -98,16 +99,22 @@ class ViewController: UIViewController {
     @IBOutlet weak var dealersScoreBoard: UILabel!
     @IBOutlet weak var playersScoreBoard: UILabel!
     @IBOutlet weak var standButton: UIButton!
+    @IBOutlet weak var blackjackLabel: UILabel!
+    @IBOutlet weak var blurEffectBackgound: UIVisualEffectView!
+    @IBOutlet weak var blurView: UIView!
     
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
         initCardArray()
-//        backCardImages = createImageArray(total: 3, imagePrefix: "backCard")
         cardImageArray = [cardHolder, cardHolder2, cardHolder3, cardHolder4, cardHolder5]
         dealerImageArray = [dealerCardHolder1, dealerCardHolder2, dealerCardHolder3, dealerCardHolder4, dealerCardHolder5]
+        effectBlur = blurEffectBackgound.effect
+        blurEffectBackgound.effect = nil
+        blackjackLabel.isHidden = true
         showNewgameButton()
+       
     }
     
    
@@ -119,6 +126,9 @@ class ViewController: UIViewController {
     
     @IBAction func randomButton(_ sender: UIButton) { // Hit, slumpar fram spelarkort
         playGame()
+//        shakeButtonPressed(playersScoreBoard)
+//        showBlackJackLabel()
+//        hideBlackJackLabel()
     }
     
     @IBAction func newGameButton(_ sender: UIButton) {
@@ -166,7 +176,9 @@ class ViewController: UIViewController {
             cardImageArray[counter].image = UIImage(named: randomCard.cardName)//byt bild
             cardValueCount.text = "\(cardCount)" // sätt poängen i labeln
             counter += 1                        //räkna upp bildplatsen
-            }
+        }else if counter == 4 && cardCount < 21{
+                dealerGame()
+        }
         if cardCount >= 17{
             checkWin()
         }
@@ -178,7 +190,6 @@ class ViewController: UIViewController {
         initCardArray()
         showNewgameButton()
         setPlayerScore()
-        //        backGroundImageMain.image = UIImage(named: "LV_4")
     }
     
     func showNewgameButton(){
@@ -191,18 +202,62 @@ class ViewController: UIViewController {
         newGameButton.isHidden  = true
         hitButton.isHidden  = false
         standButton.isHidden = false
-
     }
 
+    func showBlackJackLabel(){
+    self.view.addSubview(blackjackLabel)
+        self.blackjackLabel.isHidden = false
+        blackjackLabel.center = self.view.center
+        blackjackLabel.transform = CGAffineTransform.init(scaleX: 0.3, y: 0.3)
+        blackjackLabel.alpha = 0
+        UIView.animate(withDuration: 0.3){
+            self.blurEffectBackgound.effect = self.effectBlur
+            self.blackjackLabel.alpha = 0.5
+            self.blackjackLabel.transform = CGAffineTransform.identity
+   
+        }
+        
+    }
+    
+    func hideBlackJackLabel(){
+        UIView.animate(withDuration: 0.3, animations: {
+        self.blackjackLabel.transform = CGAffineTransform.init(scaleX: 0.6, y: 0.6)
+        self.blackjackLabel.alpha = 0
+        self.blurEffectBackgound.effect = nil
+        self.blackjackLabel.isHidden = true
+        })
+        
+//        { (success: Bool)
+//            self.blackjackLabel.removeFromSuperview()
+//        }
+    }
+    
+    // Example of using the extension on button press
+//    @IBAction func pulseButtonPressed(_ sender: UIButton) {
+//        sender.pulsate()
+//    }
+//
+//    @IBAction func flashButtonPressed(_ sender: UIButton) {
+//        sender.flash()
+//    }
+//
+    @IBAction func shakeButtonPressed(_ sender: UILabel) {
+        sender.shake()
+    }
+    @IBAction func flashButtonPressed(_ sender: UILabel) {
+        sender.flash()
+    }
+    @IBAction func pulsateButtonPressed(_ sender: UILabel) {
+        sender.pulsate()
+    }
     
     @IBAction func standButton(_ sender: Any) {
         while cardDealerCount < 17{
         dealerGame()
         }
     }
-    
+
     func dealerGame(){
-        
         randomCardIndex = Int(arc4random_uniform(UInt32(cardArray.count))) //slumpar fram tal
         let randomCard = cardArray[randomCardIndex] // tilldelar slumptal till kort
         cardArray.remove(at: randomCardIndex) //tar bort det valda kortet från leken
@@ -236,13 +291,17 @@ class ViewController: UIViewController {
             cardValueCount.text = "\(cardCount) Blackjack!"
             playersScore += 10
             setPlayerScore()
+            flashButtonPressed(playersScoreBoard)
             print(" spelare blackjack")
+//            showBlackJackLabel()
             newGame()
-        }else if cardDealerCount == 21 && dealerCounter == 2{
+//            hideBlackJackLabel()
+            }else if cardDealerCount == 21 && dealerCounter == 2{
             dealerValueCount.text = "\(cardDealerCount) Blackjack!"
             dealersScore += 10
-            
+           
             setDealerScore()
+            flashButtonPressed(dealersScoreBoard)
             print("dator blackjack")
             newGame()
         }
@@ -296,6 +355,7 @@ class ViewController: UIViewController {
     setDealerScore()
 //    cardValueCount.text = "\(cardCount) Player lost"
         setPlayerLost()
+        pulsateButtonPressed(dealersScoreBoard)
         print(" spelare tjock")
     newGame()
     }else if cardDealerCount > 21{
@@ -305,6 +365,7 @@ class ViewController: UIViewController {
     setPlayerWin()
     playersScore += 5
     setPlayerScore()
+    pulsateButtonPressed(playersScoreBoard)
     print(" dator tjock")
         newGame()
     }
@@ -322,6 +383,7 @@ class ViewController: UIViewController {
                 setDealerScore()    
 //                cardValueCount.text = "\(cardCount) Player lost"
                 setPlayerLost()
+                shakeButtonPressed(playersScoreBoard)
                 print("dator vinst")
                 newGame()
             }else if cardDealerCount < cardCount && cardCount <= 21{
@@ -331,11 +393,12 @@ class ViewController: UIViewController {
                 setPlayerWin()
                 setComputerLost()
                 setPlayerScore()
+                shakeButtonPressed(dealersScoreBoard)
                 print("spelare vinst")
                 newGame()
             }
         }
-        if cardCount >= 17 && cardCount == cardDealerCount{
+        if cardCount >= 17 && cardCount <= 20 && cardCount == cardDealerCount{
             blackJackCheck()
 //            dealerValueCount.text = "\(cardDealerCount) Stalemate"
 //            cardValueCount.text = "\(cardCount) Stalemate"
