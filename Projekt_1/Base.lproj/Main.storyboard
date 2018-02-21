@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="ZZO-NA-QNx">
     <device id="retina5_5" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -15,10 +15,10 @@
         </array>
     </customFonts>
     <scenes>
-        <!--View Controller-->
+        <!--Launch Screen View Controller-->
         <scene sceneID="6KG-Z8-YkD">
             <objects>
-                <viewController id="ZZO-NA-QNx" sceneMemberID="viewController">
+                <viewController id="ZZO-NA-QNx" customClass="LaunchScreenViewController" customModule="Projekt_1" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="vfB-IW-x1S">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -26,44 +26,75 @@
                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" alignment="top" spacing="2" translatesAutoresizingMaskIntoConstraints="NO" id="pLz-bx-TZ0">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                                 <subviews>
-                                    <imageView userInteractionEnabled="NO" alpha="0.59999999999999998" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="LV_10" translatesAutoresizingMaskIntoConstraints="NO" id="RCb-1o-B3X">
-                                        <rect key="frame" x="0.0" y="0.0" width="102" height="736"/>
-                                    </imageView>
                                     <imageView userInteractionEnabled="NO" alpha="0.59999999999999998" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="LV_7" translatesAutoresizingMaskIntoConstraints="NO" id="sRb-WD-HoZ">
-                                        <rect key="frame" x="104" y="0.0" width="102" height="736"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="136.66666666666666" height="736"/>
                                     </imageView>
                                     <imageView userInteractionEnabled="NO" alpha="0.59999999999999998" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="LV_9" translatesAutoresizingMaskIntoConstraints="NO" id="6IN-lW-Wkl">
-                                        <rect key="frame" x="208" y="0.0" width="102" height="736"/>
+                                        <rect key="frame" x="138.66666666666669" y="0.0" width="136.66666666666669" height="736"/>
                                     </imageView>
-                                    <imageView userInteractionEnabled="NO" alpha="0.59999999999999998" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Lv_6" translatesAutoresizingMaskIntoConstraints="NO" id="k7Z-ci-cTY">
-                                        <rect key="frame" x="312" y="0.0" width="102" height="736"/>
+                                    <imageView userInteractionEnabled="NO" alpha="0.59999999999999998" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="LV_10" translatesAutoresizingMaskIntoConstraints="NO" id="RCb-1o-B3X">
+                                        <rect key="frame" x="277.33333333333331" y="0.0" width="136.66666666666669" height="736"/>
                                     </imageView>
                                 </subviews>
                             </stackView>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="The only difference between a winner and a loser is character.  - Nick the Greek" textAlignment="justified" translatesAutoresizingMaskIntoConstraints="NO" id="aIk-Da-UcX">
-                                <rect key="frame" x="10" y="220" width="394" height="316"/>
-                                <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="20"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                            </textView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="QYt-cv-S9u">
+                                <rect key="frame" x="0.0" y="20" width="414" height="716"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="40" translatesAutoresizingMaskIntoConstraints="NO" id="sfS-Zd-NbE">
+                                        <rect key="frame" x="0.0" y="246" width="414" height="224.66666666666663"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="The only difference between a winner and a loser is character.  - Nick the Greek" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HaJ-r4-tFm">
+                                                <rect key="frame" x="0.0" y="0.0" width="414" height="92.333333333333329"/>
+                                                <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="26"/>
+                                                <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="J8Y-pe-k6Z">
+                                                <rect key="frame" x="0.0" y="132.33333333333331" width="414" height="92.333333333333314"/>
+                                                <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="37"/>
+                                                <state key="normal" title="Let's play!">
+                                                    <color key="titleColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </state>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                        <real key="value" value="0.0"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="startButton:" destination="ZZO-NA-QNx" eventType="touchUpInside" id="Oup-zv-JCf"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="sfS-Zd-NbE" firstAttribute="centerX" secondItem="QYt-cv-S9u" secondAttribute="centerX" id="IRa-DT-Jtg"/>
+                                    <constraint firstItem="sfS-Zd-NbE" firstAttribute="leading" secondItem="QYt-cv-S9u" secondAttribute="leading" id="Zwz-EZ-xFb"/>
+                                    <constraint firstItem="sfS-Zd-NbE" firstAttribute="centerY" secondItem="QYt-cv-S9u" secondAttribute="centerY" id="jre-yd-xpS"/>
+                                    <constraint firstAttribute="trailing" secondItem="sfS-Zd-NbE" secondAttribute="trailing" id="qTN-nA-cLn"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" red="0.052821151910000003" green="0.36044147609999999" blue="0.0681200847" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstItem="jKZ-eS-IxV" firstAttribute="bottom" secondItem="QYt-cv-S9u" secondAttribute="bottom" id="3aB-Ys-w3u"/>
                             <constraint firstItem="pLz-bx-TZ0" firstAttribute="leading" secondItem="jKZ-eS-IxV" secondAttribute="leading" id="3hk-pA-Z4r"/>
-                            <constraint firstItem="aIk-Da-UcX" firstAttribute="top" secondItem="jKZ-eS-IxV" secondAttribute="top" constant="200" id="CmF-UZ-oHn"/>
                             <constraint firstAttribute="trailing" secondItem="pLz-bx-TZ0" secondAttribute="trailing" id="DFl-Y4-m4r"/>
                             <constraint firstAttribute="bottom" secondItem="pLz-bx-TZ0" secondAttribute="bottom" id="JhX-lU-jh9"/>
-                            <constraint firstItem="aIk-Da-UcX" firstAttribute="leading" secondItem="jKZ-eS-IxV" secondAttribute="leading" constant="10" id="dKa-EA-Zho"/>
+                            <constraint firstItem="QYt-cv-S9u" firstAttribute="top" secondItem="jKZ-eS-IxV" secondAttribute="top" id="S9O-jJ-paI"/>
+                            <constraint firstItem="jKZ-eS-IxV" firstAttribute="trailing" secondItem="QYt-cv-S9u" secondAttribute="trailing" id="bEE-AG-9DA"/>
                             <constraint firstItem="pLz-bx-TZ0" firstAttribute="top" secondItem="vfB-IW-x1S" secondAttribute="top" id="gjn-AY-U4S"/>
-                            <constraint firstItem="jKZ-eS-IxV" firstAttribute="bottom" secondItem="aIk-Da-UcX" secondAttribute="bottom" constant="200" id="vBv-4o-3XI"/>
-                            <constraint firstItem="jKZ-eS-IxV" firstAttribute="trailing" secondItem="aIk-Da-UcX" secondAttribute="trailing" constant="10" id="wSZ-SB-0dd"/>
+                            <constraint firstItem="QYt-cv-S9u" firstAttribute="leading" secondItem="jKZ-eS-IxV" secondAttribute="leading" id="xV3-h3-UC3"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="jKZ-eS-IxV"/>
                     </view>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="presentation" identifier="gameBoard" id="NPS-yl-WuQ"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wcj-3N-6Vc" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-971" y="131"/>
+            <point key="canvasLocation" x="-971.01449275362324" y="130.43478260869566"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
@@ -85,6 +116,11 @@
                                         <subviews>
                                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="backCard_0" translatesAutoresizingMaskIntoConstraints="NO" id="joe-ei-YVV">
                                                 <rect key="frame" x="0.0" y="0.0" width="78" height="100"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                        <real key="value" value="0.0"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
                                             </imageView>
                                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="backCard_0" translatesAutoresizingMaskIntoConstraints="NO" id="32V-q7-jep">
                                                 <rect key="frame" x="79" y="0.0" width="78" height="100"/>
@@ -124,7 +160,7 @@
                                                         <real key="value" value="15"/>
                                                     </userDefinedRuntimeAttribute>
                                                     <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
-                                                        <color key="value" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <color key="value" red="0.095214374363422394" green="0.64932483434677124" blue="0.11764592677354813" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     </userDefinedRuntimeAttribute>
                                                     <userDefinedRuntimeAttribute type="number" keyPath="shadowRadius">
                                                         <real key="value" value="0.0"/>
@@ -153,7 +189,7 @@
                                                         <real key="value" value="1"/>
                                                     </userDefinedRuntimeAttribute>
                                                     <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
-                                                        <color key="value" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <color key="value" red="0.095214374363422394" green="0.64932483434677124" blue="0.11764592677354813" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     </userDefinedRuntimeAttribute>
                                                     <userDefinedRuntimeAttribute type="number" keyPath="shadowRadius">
                                                         <real key="value" value="0.0"/>
@@ -182,7 +218,7 @@
                                                         <real key="value" value="1"/>
                                                     </userDefinedRuntimeAttribute>
                                                     <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
-                                                        <color key="value" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <color key="value" red="0.095214374363422394" green="0.64932483434677124" blue="0.11764592677354813" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     </userDefinedRuntimeAttribute>
                                                     <userDefinedRuntimeAttribute type="number" keyPath="shadowRadius">
                                                         <real key="value" value="0.0"/>
@@ -208,7 +244,7 @@
                                                         <real key="value" value="1"/>
                                                     </userDefinedRuntimeAttribute>
                                                     <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
-                                                        <color key="value" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <color key="value" red="0.095214374363422394" green="0.64932483434677124" blue="0.11764592677354813" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     </userDefinedRuntimeAttribute>
                                                     <userDefinedRuntimeAttribute type="number" keyPath="shadowRadius">
                                                         <real key="value" value="0.0"/>
@@ -266,7 +302,7 @@
                                                         <real key="value" value="1"/>
                                                     </userDefinedRuntimeAttribute>
                                                     <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
-                                                        <color key="value" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <color key="value" red="0.095214374363422394" green="0.64932483434677124" blue="0.11764592677354813" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     </userDefinedRuntimeAttribute>
                                                     <userDefinedRuntimeAttribute type="number" keyPath="shadowRadius">
                                                         <real key="value" value="0.0"/>
@@ -296,7 +332,7 @@
                                                 </state>
                                                 <userDefinedRuntimeAttributes>
                                                     <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
-                                                        <color key="value" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <color key="value" red="0.095214374363422394" green="0.64932483434677124" blue="0.11764592677354813" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     </userDefinedRuntimeAttribute>
                                                     <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
                                                         <real key="value" value="1"/>
@@ -335,7 +371,7 @@
                                                         <real key="value" value="1"/>
                                                     </userDefinedRuntimeAttribute>
                                                     <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
-                                                        <color key="value" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <color key="value" red="0.095214374363422394" green="0.64932483434677124" blue="0.11764592677354813" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     </userDefinedRuntimeAttribute>
                                                     <userDefinedRuntimeAttribute type="number" keyPath="shadowRadius">
                                                         <real key="value" value="0.0"/>
@@ -463,7 +499,6 @@
         <image name="LV_2" width="1691" height="2576"/>
         <image name="LV_7" width="1569" height="2443"/>
         <image name="LV_9" width="750" height="1080"/>
-        <image name="Lv_6" width="892" height="1354"/>
         <image name="backCard_0" width="140" height="190"/>
     </resources>
 </document>
